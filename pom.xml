@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.lcdaponte</groupId>
 	<artifactId>feelslikehome</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>feelslikehome</name>
 	<description>API for saving recipes that make you feel good</description>
 	<properties>
@@ -183,7 +183,7 @@
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>4.3.5</version>
 				<configuration>
-					<changeLogFile>src/main/resources/db/changelog/changelog-master.xml</changeLogFile>
+					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -194,6 +194,13 @@
 				</dependencies>
 			</plugin>
 		</plugins>
+		<extensions>
+			<extension>
+				<groupId>com.github.shyiko.servers-maven-extension</groupId>
+				<artifactId>servers-maven-extension</artifactId>
+				<version>1.3.0</version>
+			</extension>
+		</extensions>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -208,7 +215,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<spring.profiles.active>tst</spring.profiles.active>
+				<activatedProperties>tst</activatedProperties>
 			</properties>
 		</profile>
 	</profiles>
