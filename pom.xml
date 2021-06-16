@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.lcdaponte</groupId>
 	<artifactId>feelslikehome</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>feelslikehome</name>
 	<description>API for saving recipes that make you feel good</description>
 	<properties>

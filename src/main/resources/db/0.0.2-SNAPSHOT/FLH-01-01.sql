@@ -10,3 +10,6 @@ CREATE TABLE ingredients (
 	createdAt TIMESTAMP NOT NULL,
 	updatedAt TIMESTAMP NOT NULL
 );
+
+--rollback DROP TABLE
+--rollback ingredients;
